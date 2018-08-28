@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CDProject" representedClassName="CDProject" syncable="YES">
+        <attribute name="bugs" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="swifter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwifter" inverseName="failedProjects" inverseEntity="CDSwifter" syncable="YES"/>
+    </entity>
+    <entity name="CDSwifter" representedClassName="CDSwifter" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="failedProjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDProject" inverseName="swifter" inverseEntity="CDProject" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDProject" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="CDSwifter" positionX="-63" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>
